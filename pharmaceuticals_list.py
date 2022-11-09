@@ -9,7 +9,7 @@ mydb = mysql.connector.connect(
 
 mycursor = mydb.cursor()
 
-mycursor.execute("INSERT INTO pharmaceuticals_name_list (name) SELECT DISTINCT pharmaceuticals  FROM ep_medicine_list")
+mycursor.execute("INSERT INTO pharmaceuticals_name_list (name) SELECT DISTINCT pharmaceuticals  FROM ep_medicine_list ORDER BY pharmaceuticals")
 mydb.commit()
 
 
